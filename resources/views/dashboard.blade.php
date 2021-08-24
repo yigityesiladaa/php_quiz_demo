@@ -13,6 +13,7 @@
                     <p class="mb-1">{{Str::limit($quiz->description,110)}}</p>
                     <small>{{$quiz->questions_count}} Question</small>
                 </a>
+                <br>
                 @endforeach
                 <div class="mt-2">
                     {{$quizzes->links()}}
@@ -31,6 +32,7 @@
                         <strong class="text-success">{{$result->point}}</strong> -
                         <a href="{{route('quiz.detail',$result->quiz->slug)}}" style="text-decoration: none;color:black">{{$result->quiz->title}}</a>
                     </li>
+
                     @endforeach
                 </ul>
             </div>
